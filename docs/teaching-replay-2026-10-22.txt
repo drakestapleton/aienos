@@ -1,0 +1,28 @@
+TEACHING REPLAY 2026-10-22 UTC
+repository: drakestapleton/aienos
+base_sha: 603c91d8ec2e6b1d7e2db25591275662eb5c92f0
+source_sha: 93cf62995639799f83a020eca8b4a0bfa42c7830
+environment: macOS-26.6.2-arm64-arm-64bit-Mach-O; python 3.14.6
+tool_versions:
+git --version: git version 2.55.0
+node --version: v22.18.0
+jq --version: jq-1.7.1-apple
+openssl version: OpenSSL 3.6.3 9 Jun 2026 (Library: OpenSSL 3.6.3 9 Jun 2026)
+cargo --version: cargo 1.97.1 (c980f4866 2026-06-30)
+qualification: source check PASS; QEMU/native boot unverified by this replay
+checkout: fresh git clone --no-hardlinks --branch docs/teaching-20261022 from dedicated cohort clone
+command (from docs/TEACHING.md):
+python3 - <<'PYEX'
+from pathlib import Path
+s=Path('crates/aienos-evidence/src/verify.rs').read_text()
+assert 'pub fn check(bundle: &Value) -> Report' in s
+assert 'bundle checksum mismatch' in s and 'm0_open' in s
+print('CAPTURE CHECK AND OPEN-GATE PATH PRESENT')
+PYEX
+
+stdout:
+CAPTURE CHECK AND OPEN-GATE PATH PRESENT
+
+stderr:
+
+exit: 0
