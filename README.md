@@ -1,3 +1,7 @@
+<!-- github-native-navigation -->
+[Source](https://github.com/drakestapleton/aienos) · [Walkthrough](docs/TEACHING.md) · [Replay receipt](docs/teaching-replay-2026-10-22.txt)
+<!-- /github-native-navigation -->
+
 # AIENOS
 
 ## How it works and how to reproduce
