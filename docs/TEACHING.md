@@ -19,3 +19,8 @@ PYEX
 ```
 
 Expected that line, exit 0. This only inspects the actual guard source. Native boot and QEMU reproduction require their specific toolchains and safe target images; neither is claimed by this host check. The negative case is a checksum mismatch reported by the function, whose behavior needs a Rust test to qualify independently. [Replay receipt](teaching-replay-2026-10-22.txt).
+
+
+### Parent fresh-checkout replay
+
+A separate coordination replay is retained in [the parent receipt](parent-replay-2026-10-22.txt). Its scope and observed exit are explicit; source review and final desk qualification remain separate. A recorded absence or expected failing baseline is not a passing implementation.
