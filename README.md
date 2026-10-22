@@ -1,11 +1,15 @@
 # AIENOS
 
+## How it works and how to reproduce
+
+I trace one actual source or design boundary in [the worked lesson](docs/TEACHING.md), with a pinned fresh-checkout exercise and [raw replay receipt](docs/teaching-replay-2026-10-22.txt). The lesson states what remains unimplemented or unverified at this revision.
+
 > **Status: experimental / pre-alpha.** The first native boot on the NVIDIA DGX Spark passed on 2026-09-24 ([evidence](evidence/m2_first_boot_2026-09-24.md)); the operating system itself is far from usable. No support, stability, or compatibility promises. Expect breaking changes.
 
 ## Help build AIENOS
 
-We are building a sovereign, agent-native operating system in Rust, from the
-first instruction after firmware upward, and we want help. Kernel isolation,
+I am building a sovereign, agent-native operating system in Rust, from the
+first instruction after firmware upward, and I welcome help. Kernel isolation,
 memory management, interrupts, scheduling, storage, networking and native
 inference are all open, and most of it can be developed and tested in QEMU on
 any machine: no special hardware needed.
